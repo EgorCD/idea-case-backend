@@ -2,15 +2,6 @@ USE casedb; /* UPDATED 2024-01-24 */
 
 /* --- 01 CREATE TABLES --- */
 
-CREATE TABLE IF NOT EXISTS Category (
-    id              INTEGER             NOT NULL AUTO_INCREMENT,
-    name            VARCHAR(255)        NOT NULL UNIQUE,
-    description     VARCHAR(255),
-    budgetLimit     DECIMAL(19,4),
-    isActive        BOOLEAN             DEFAULT 1,
-    PRIMARY KEY (id)
-) ENGINE=InnoDB AUTO_INCREMENT=10001 DEFAULT CHARSET=latin1;
-
 CREATE TABLE IF NOT EXISTS GlobalSetting (
     id              INTEGER                     NOT NULL AUTO_INCREMENT,
     variable            VARCHAR(255)   UNIQUE       NOT NULL,
@@ -22,6 +13,15 @@ CREATE TABLE IF NOT EXISTS GlobalSetting (
 
     PRIMARY KEY (id)
 )   ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS Category (
+    id              INTEGER             NOT NULL AUTO_INCREMENT,
+    name            VARCHAR(255)        NOT NULL UNIQUE,
+    description     VARCHAR(255),
+    budgetLimit     DECIMAL(19,4),
+    isActive        BOOLEAN             DEFAULT 1,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=10001 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS Department (
     id          INTEGER                 NOT NULL AUTO_INCREMENT,

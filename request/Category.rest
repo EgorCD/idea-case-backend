@@ -1,0 +1,35 @@
+### 1. List all Categories
+GET {{host}}/category
+Authorization: Basic {{token}}
+
+### 2. Get Category by ID
+GET {{host}}/category/10004
+Authorization: Basic {{token}}
+
+### 3. Create a new Category
+POST {{host}}/category
+Authorization: Basic {{token}}
+Content-Type: application/json
+
+{
+  "name": "New Category",
+  "description": "This is a test category",
+  "budgetLimit": 5000.00,
+  "isActive": true
+}
+
+### 4. Update Category
+PUT {{host}}/category/10004
+Authorization: Basic {{token}}
+Content-Type: application/json
+
+{
+  "name": "Updated Category",
+  "description": "This is an updated category description",
+  "budgetLimit": 10000.00,
+  "isActive": false
+}
+
+### 5. Delete Category by ID
+DELETE {{host}}/category/10003
+Authorization: Basic {{token}}

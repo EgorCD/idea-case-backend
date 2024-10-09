@@ -10,6 +10,7 @@ services:
     ports:
       - '${DB_PORT}:3306'
     volumes:
+      - ./Database/SQL_Scripts/000__CreateALLdb.sql:/docker-entrypoint-initdb.d/init.sql
       - mariadb_volume:/var/lib/mysql
 
 volumes:

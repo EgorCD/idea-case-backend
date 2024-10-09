@@ -2,14 +2,6 @@ USE casedb; /* UPDATED 2024-02-26 */
 
 /* INSERTS */
 
-/* --- Insert: Category --- */
-INSERT INTO Category (name, description, budgetLimit, isActive)
-VALUES 
-('Technology', 'Tech-related ideas', 10000.00, true),
-('Healthcare', 'Ideas for healthcare improvements', 20000.00, true),
-('Education', 'Educational projects', 5000.00, true),
-('Environment', 'Environmental sustainability initiatives', 15000.00, true);
-
 /* --- Insert: GlobalSettings --- */
 INSERT INTO GlobalSetting(variable, description, numberValue, textValue) VALUES
     ('highPriority', 'High priority value', 800, NULL),
@@ -17,6 +9,13 @@ INSERT INTO GlobalSetting(variable, description, numberValue, textValue) VALUES
     ("items-per-page", "The number of items to display per page in lists. Default is 15.", 15, NULL),
     ('spaceUnderUsage','The limit under which to show space usage as yellow',20,NULL),
     ('spaceOverUsage','The limit over which to show space usage as red or other prob color',30,NULL);
+
+/* --- Insert: Category --- */
+INSERT INTO Category (name, description, budgetLimit, isActive) VALUES 
+    ('Technology', 'Tech-related ideas', 10000.00, true),
+    ('Healthcare', 'Ideas for healthcare improvements', 20000.00, true),
+    ('Education', 'Educational projects', 5000.00, true),
+    ('Environment', 'Environmental sustainability initiatives', 15000.00, true);
 
 /* --- Insert: Department --- */
 INSERT INTO Department(name, description) VALUES

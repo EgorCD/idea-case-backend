@@ -14,6 +14,7 @@ DROP TABLE IF EXISTS AllocSubject;
 
 DROP TABLE IF EXISTS SubjectEquipment;
 DROP TABLE IF EXISTS Subject;
+DROP TABLE IF EXISTS Category;
 DROP TABLE IF EXISTS AllocRound;
 DROP TABLE IF EXISTS Program;
 
@@ -50,6 +51,15 @@ CREATE TABLE IF NOT EXISTS GlobalSetting (
 
     PRIMARY KEY (id)
 )   ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS Category (
+    id              INTEGER             NOT NULL AUTO_INCREMENT,
+    name            VARCHAR(255)        NOT NULL UNIQUE,
+    description     VARCHAR(255),
+    budgetLimit     DECIMAL(19,4),
+    isActive        BOOLEAN             DEFAULT 1,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=10001 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS Department (
     id          INTEGER                 NOT NULL AUTO_INCREMENT,
@@ -383,6 +393,7 @@ CREATE TABLE IF NOT EXISTS log_event (
 USE casedb; /* UPDATED 2024-02-26 */
 
 /* INSERTS */
+
 /* --- Insert: GlobalSettings --- */
 INSERT INTO GlobalSetting(variable, description, numberValue, textValue) VALUES
     ('highPriority', 'High priority value', 800, NULL),
@@ -390,6 +401,13 @@ INSERT INTO GlobalSetting(variable, description, numberValue, textValue) VALUES
     ("items-per-page", "The number of items to display per page in lists. Default is 15.", 15, NULL),
     ('spaceUnderUsage','The limit under which to show space usage as yellow',20,NULL),
     ('spaceOverUsage','The limit over which to show space usage as red or other prob color',30,NULL);
+
+/* --- Insert: Category --- */
+INSERT INTO Category (name, description, budgetLimit, isActive) VALUES 
+    ('Technology', 'Tech-related ideas', 10000.00, true),
+    ('Healthcare', 'Ideas for healthcare improvements', 20000.00, true),
+    ('Education', 'Educational projects', 5000.00, true),
+    ('Environment', 'Environmental sustainability initiatives', 15000.00, true);
 
 /* --- Insert: Department --- */
 INSERT INTO Department(name, description) VALUES
