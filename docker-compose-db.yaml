@@ -6,13 +6,10 @@ services:
     image: mariadb:11.1.2-jammy    # OR:   mariadb:latest
     container_name: mariadb_container
     env_file:
-      - .env.db
-      - .env.db.root
-      - .env.network
+      - .env
     ports:
       - '${DB_PORT}:3306'
     volumes:
-      - ./Database/SQL_Scripts/000__CreateALLdb.sql:/docker-entrypoint-initdb.d/init.sql
       - mariadb_volume:/var/lib/mysql
 
 volumes:
