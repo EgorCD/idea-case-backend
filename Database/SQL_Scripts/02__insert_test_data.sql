@@ -17,6 +17,13 @@ INSERT INTO Category (name, description, budgetLimit, isActive) VALUES
     ('Education', 'Educational projects', 5000.00, true),
     ('Environment', 'Environmental sustainability initiatives', 15000.00, true);
 
+/* --- Insert: City (Helsinki Area) --- */
+INSERT INTO City (name, established, averageTemp) VALUES 
+    ('Helsinki', '1550-06-12', 5.5),
+    ('Espoo', '1458-01-01', 5.2),
+    ('Vantaa', '1331-01-01', 5.4),
+    ('Kauniainen', '1920-01-01', 5.6);
+
 /* --- Insert: Department --- */
 INSERT INTO Department(name, description) VALUES
 	('Jazz', NULL),

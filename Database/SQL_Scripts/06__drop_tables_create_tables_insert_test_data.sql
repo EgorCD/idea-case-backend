@@ -15,6 +15,7 @@ DROP TABLE IF EXISTS AllocSubject;
 DROP TABLE IF EXISTS SubjectEquipment;
 DROP TABLE IF EXISTS Subject;
 DROP TABLE IF EXISTS Category;
+DROP TABLE IF EXISTS City;
 DROP TABLE IF EXISTS AllocRound;
 DROP TABLE IF EXISTS Program;
 
@@ -58,6 +59,14 @@ CREATE TABLE IF NOT EXISTS Category (
     description     VARCHAR(255),
     budgetLimit     DECIMAL(19,4),
     isActive        BOOLEAN             DEFAULT 1,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=10001 DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS City (
+    id              INTEGER             NOT NULL AUTO_INCREMENT,
+    name            VARCHAR(200)        NOT NULL,
+    established     DATE                NULL,
+    averageTemp     DECIMAL(3,1)        NULL,
     PRIMARY KEY (id)
 ) ENGINE=InnoDB AUTO_INCREMENT=10001 DEFAULT CHARSET=latin1;
 
@@ -409,6 +418,13 @@ INSERT INTO Category (name, description, budgetLimit, isActive) VALUES
     ('Education', 'Educational projects', 5000.00, true),
     ('Environment', 'Environmental sustainability initiatives', 15000.00, true);
 
+/* --- Insert: City (Helsinki Area) --- */
+INSERT INTO City (name, established, averageTemp) VALUES 
+    ('Helsinki', '1550-06-12', 5.5),
+    ('Espoo', '1458-01-01', 5.2),
+    ('Vantaa', '1331-01-01', 5.4),
+    ('Kauniainen', '1920-01-01', 5.6);
+
 /* --- Insert: Department --- */
 INSERT INTO Department(name, description) VALUES
 	('Jazz', NULL),
@@ -443,7 +459,6 @@ INSERT INTO DepartmentPlanner(userId, departmentId) VALUES
     (203, 103),
     (203, 104),
     (202, 102);
-
 
 /* --- Insert: Building * --- */
 INSERT INTO `Building` (`name`, `description`) VALUES

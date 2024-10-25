@@ -23,6 +23,14 @@ CREATE TABLE IF NOT EXISTS Category (
     PRIMARY KEY (id)
 ) ENGINE=InnoDB AUTO_INCREMENT=10001 DEFAULT CHARSET=latin1;
 
+CREATE TABLE IF NOT EXISTS City (
+    id              INTEGER             NOT NULL AUTO_INCREMENT,
+    name            VARCHAR(200)        NOT NULL,
+    established     DATE                NULL,
+    averageTemp     DECIMAL(3,1)        NULL,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=10001 DEFAULT CHARSET=latin1;
+
 CREATE TABLE IF NOT EXISTS Department (
     id          INTEGER                 NOT NULL AUTO_INCREMENT,
     name        VARCHAR(255)    UNIQUE  NOT NULL,
