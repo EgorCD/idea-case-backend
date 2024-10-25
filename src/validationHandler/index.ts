@@ -44,6 +44,32 @@ export const createIdValidatorChain = (
     .bail(),
 ];
 
+// Common validator for date (YYYY-MM-DD format)
+export const createDateValidatorChain = (
+  fieldName: string,
+): ValidationChain[] => [
+  check(`${fieldName}`)
+    .isISO8601()
+    .withMessage(`${fieldName} must be a valid date in the format YYYY-MM-DD`)
+    .optional({ nullable: true, checkFalsy: true })
+    .bail(),
+];
+
+// Common validator for decimal numbers (for averageTemp)
+export const createDecimalValidatorChain = (
+  fieldName: string,
+  precision: number,
+  scale: number,
+): ValidationChain[] => [
+  check(`${fieldName}`)
+    .matches(new RegExp(`^\\d{1,${precision}}(\\.\\d{1,${scale}})?$`))
+    .withMessage(
+      `${fieldName} must be a decimal number with up to ${precision} digits and ${scale} decimal places`,
+    )
+    .optional({ nullable: true, checkFalsy: true })
+    .bail(),
+];
+
 export const createNameValidatorChain = (
   fieldName: string,
 ): ValidationChain[] => [
