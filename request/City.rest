@@ -1,0 +1,33 @@
+### 1. List all Cities
+GET {{host}}/city
+Authorization: Basic {{token}}
+
+### 2. Get City by ID
+GET {{host}}/city/10004
+Authorization: Basic {{token}}
+
+### 3. Create a new City
+POST {{host}}/city
+Authorization: Basic {{token}}
+Content-Type: application/json
+
+{
+  "name": "Helsinki",
+  "established": "1550-06-12",
+  "averageTemp": 5.0
+}
+
+### 4. Update City
+PUT {{host}}/city/10004
+Authorization: Basic {{token}}
+Content-Type: application/json
+
+{
+  "name": "Updated Helsinki",
+  "established": "1550-06-12",
+  "averageTemp": 5.0
+}
+
+### 5. Delete City by ID
+DELETE {{host}}/city/10003
+Authorization: Basic {{token}}
