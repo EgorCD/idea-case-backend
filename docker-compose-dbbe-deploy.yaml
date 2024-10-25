@@ -5,9 +5,7 @@ services:
     image: mariadb:latest
     container_name: siba_db_container
     env_file:
-      - .env.db
-      - .env.db.root
-      - .env.network
+      - .env
     ports:
       - '${DB_PORT}:3306'
     volumes:
