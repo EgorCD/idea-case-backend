@@ -4,16 +4,16 @@
             "host": "http://localhost:8764/api"
         },
         "adminEnv": {
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAxLCJlbWFpbCI6ImFkbWluIiwiaXNBZG1pbiI6MSwiaXNQbGFubmVyIjowLCJpc1N0YXRpc3QiOjAsImlhdCI6MTcyNTI2Njg1MSwiZXhwIjoxNzI1MzUzMjUxfQ.dc4uTUL2Z9zZ_p8nqxNwTxQFCUvN5CRlQGOjsxgcGyE"
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAxLCJlbWFpbCI6ImFkbWluIiwiaXNBZG1pbiI6MSwiaXNQbGFubmVyIjowLCJpc1N0YXRpc3QiOjAsImlhdCI6MTcyOTg4OTg4MSwiZXhwIjoxNzI5OTc2MjgxfQ.Rj7ZT2mkHCzQyh90PsPkHHB5-ZocjY30gezNRQk9u0Y"
         },
         "plannerEnv": {
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAyLCJlbWFpbCI6InBsYW5uZXIiLCJpc0FkbWluIjowLCJpc1BsYW5uZXIiOjEsImlzU3RhdGlzdCI6MCwiaWF0IjoxNzI1MjY3MDUwLCJleHAiOjE3MjUzNTM0NTB9.c2QC95WbSSGyEgsppGSJe6zjA0qjZF1FEJ7cn2pbyzM"
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAyLCJlbWFpbCI6InBsYW5uZXIiLCJpc0FkbWluIjowLCJpc1BsYW5uZXIiOjEsImlzU3RhdGlzdCI6MCwiaWF0IjoxNzI5ODkwMTI1LCJleHAiOjE3Mjk5NzY1MjV9.Fai5SrwtZ3vOx10Mp3klP4b6ln55BmdsrkyL7XYXFUk"
         },
         "statistEnv": {
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAzLCJlbWFpbCI6InN0YXRpc3QiLCJpc0FkbWluIjowLCJpc1BsYW5uZXIiOjAsImlzU3RhdGlzdCI6MSwiaWF0IjoxNzA3MTI4Nzc0LCJleHAiOjE3MDcyMTUxNzR9.iTl9UP7qmfQI3EoFf7Uy-3hkTO1Au_bR7n5baJYTrkA"
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAzLCJlbWFpbCI6InN0YXRpc3QiLCJpc0FkbWluIjowLCJpc1BsYW5uZXIiOjAsImlzU3RhdGlzdCI6MSwiaWF0IjoxNzI5ODkwMTUwLCJleHAiOjE3Mjk5NzY1NTB9.FRbRACpGb9iBAOpi94pOEmU0mHKXZ5-Yj8eGmaNjFBw"
         },
         "noRoleEnv": {
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjA0LCJlbWFpbCI6Im5vcm9sZXVzZXIiLCJpc0FkbWluIjowLCJpc1BsYW5uZXIiOjAsImlzU3RhdGlzdCI6MCwiaWF0IjoxNzA3MTI4OTA1LCJleHAiOjE3MDcyMTUzMDV9.668a_Ho0_n47pUKdNXOFyl72QArKSPzeq8TkuUgxxhc"
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjA0LCJlbWFpbCI6Im5vcm9sZXVzZXIiLCJpc0FkbWluIjowLCJpc1BsYW5uZXIiOjAsImlzU3RhdGlzdCI6MCwiaWF0IjoxNzI5ODkwMTc2LCJleHAiOjE3Mjk5NzY1NzZ9.OJIZyKTQfWKjoVz_5wfLCt309fIpmjZ2PT1w2BBnJX4"
         },
         "expiredTokenEnv": {
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAxLCJlbWFpbCI6ImFkbWluIiwiaXNBZG1pbiI6MSwiaXNQbGFubmVyIjowLCJpc1N0YXRpc3QiOjAsImlhdCI6MTcwNjE3MDcyOSwiZXhwIjoxNzA2MjU3MTI5fQ.AQyijNOFMs418CarfGP415imr2Oanh0Fzb4cgKBN9x8"

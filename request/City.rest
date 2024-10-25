@@ -23,7 +23,7 @@ Authorization: Basic {{token}}
 Content-Type: application/json
 
 {
-  "name": "Updated Helsinki",
+  "name": "Updated Kauniainen",
   "established": "1550-06-12",
   "averageTemp": 5.0
 }
