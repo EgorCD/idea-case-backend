@@ -460,6 +460,7 @@ INSERT INTO DepartmentPlanner(userId, departmentId) VALUES
     (203, 104),
     (202, 102);
 
+
 /* --- Insert: Building * --- */
 INSERT INTO `Building` (`name`, `description`) VALUES
 	('Musiikkitalo', NULL),
