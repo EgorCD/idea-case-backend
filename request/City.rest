@@ -2,11 +2,25 @@
 GET {{host}}/city
 Authorization: Basic {{token}}
 
-### 2. Get City by ID
+### 1.1. List all cities with missing authorization, should fail
+GET {{host}}/city
+
+##################
+
+### 2. Get city by id
 GET {{host}}/city/10004
 Authorization: Basic {{token}}
 
-### 3. Create a new City
+### 2.1. Get city by id with non-existent ID, should fail
+GET {{host}}/city/99999
+Authorization: Basic {{token}}
+
+### 2.2. Get city by id with missing authorization, should fail
+GET {{host}}/city/10004
+
+##################
+
+### 3. Create a new city
 POST {{host}}/city
 Authorization: Basic {{token}}
 Content-Type: application/json
@@ -17,7 +31,41 @@ Content-Type: application/json
   "averageTemp": 5.0
 }
 
-### 4. Update City
+### 3.1. Create a new city with missing name field
+POST {{host}}/city
+Authorization: Basic {{token}}
+Content-Type: application/json
+
+{
+  "established": "1550-06-12",
+  "averageTemp": 5.0
+}
+
+### 3.2. Create a new city with invalid data format for established field, should fail
+POST {{host}}/city
+Authorization: Basic {{token}}
+Content-Type: application/json
+
+{
+  "name": "Helsinki",
+  "established": "June 12, 1550",
+  "averageTemp": 5.0
+}
+
+### 3.3. Create a new city with invalid data type for averageTemp field, should fail
+POST {{host}}/city
+Authorization: Basic {{token}}
+Content-Type: application/json
+
+{
+  "name": "Helsinki",
+  "established": "1550-06-12",
+  "averageTemp": "five"
+}
+
+##################
+
+### 4. Update city
 PUT {{host}}/city/10004
 Authorization: Basic {{token}}
 Content-Type: application/json
@@ -28,6 +76,57 @@ Content-Type: application/json
   "averageTemp": 5.0
 }
 
-### 5. Delete City by ID
+### 4.1. Update city with non-existing id, should fail
+PUT {{host}}/city/99999
+Authorization: Basic {{token}}
+Content-Type: application/json
+
+{
+  "name": "Non-existent City",
+  "established": "1550-06-12",
+  "averageTemp": 5.0
+}
+
+### 4.2. Update city with invalid data type for averageTemp field, should fail
+PUT {{host}}/city/10004
+Authorization: Basic {{token}}
+Content-Type: application/json
+
+{
+  "name": "Updated Kauniainen",
+  "established": "1550-06-12",
+  "averageTemp": "cold"
+}
+
+### 4.3. Update city with missing name field, should fail
+PUT {{host}}/city/10004
+Authorization: Basic {{token}}
+Content-Type: application/json
+
+{
+  "established": "1550-06-12",
+  "averageTemp": 5.0
+}
+
+### 4.4. Update city with missing authorization, should fail
+PUT {{host}}/city/10004
+Content-Type: application/json
+
+{
+  "name": "Updated Kauniainen",
+  "established": "1550-06-12",
+  "averageTemp": 5.0
+}
+
+##################
+
+### 5. Delete city by id
 DELETE {{host}}/city/10003
 Authorization: Basic {{token}}
+
+### 5.1. Delete city by id with non-existing id, should fail
+DELETE {{host}}/city/99999
+Authorization: Basic {{token}}
+
+### 5.2. Delete city by id without authorization, should fail
+DELETE {{host}}/city/10003
